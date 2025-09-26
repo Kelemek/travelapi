@@ -11,6 +11,6 @@
     "deploy": "netlify deploy",
     "deploy:prod": "netlify deploy --prod"
   },
-  "author": "Tom Chant",
+  "author": "Mark Larson",
   "license": "ISC"
 }

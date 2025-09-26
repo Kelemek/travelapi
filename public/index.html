@@ -66,11 +66,10 @@
         <ul>
             <li><code>continent</code> - Filter by continent name</li>
             <li><code>country</code> - Filter by country name</li>
-            <li><code>activity</code> - Filter by activity type</li>
-            <li>And more based on your data structure...</li>
+            <li><code>is_open_to_public</code> - Filter by open to public</li>
         </ul>
         <div class="example">
-            <strong>Example:</strong> <code>/api?continent=Europe&country=Italy</code>
+            <strong>Example:</strong> <code>/api?continent=Europe&country=Italy&is_open_to_public=true</code>
         </div>
     </div>
 
@@ -92,11 +91,11 @@
 
     <h2>Response Format</h2>
     <p>All endpoints return JSON data in the following format:</p>
-    <pre><code>{
-  "data": [...],
-  "count": number,
-  "message": "string"
-}</code></pre>
+    <code>{
+        "data": [...],
+        "count": number,
+        "message": "string"
+    }</code>
 
     <h2>CORS</h2>
     <p>This API supports Cross-Origin Resource Sharing (CORS) and can be accessed from any domain.</p>
