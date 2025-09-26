@@ -1,0 +1,32 @@
+[build]
+  functions = "netlify/functions"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/api/continent/:continent"
+  to = "/.netlify/functions/continent?continent=:continent"
+  status = 200
+
+[[redirects]]
+  from = "/api/country/:country"
+  to = "/.netlify/functions/country?country=:country"
+  status = 200
+
+[[redirects]]
+  from = "/api"
+  to = "/.netlify/functions/api"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200
+
+# Catch-all for SPA routing (optional)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Horizons Travel API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+        }
+        .endpoint {
+            background: #f4f4f4;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .method {
+            background: #28a745;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .example {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌍 Wild Horizons Travel API</h1>
+        <p>A dataset of the planet's most interesting places</p>
+    </div>
+
+    <h2>Available Endpoints</h2>
+
+    <div class="endpoint">
+        <h3><span class="method">GET</span> /api</h3>
+        <p>Get all destinations with optional query parameters for filtering.</p>
+        <p><strong>Query Parameters:</strong></p>
+        <ul>
+            <li><code>continent</code> - Filter by continent name</li>
+            <li><code>country</code> - Filter by country name</li>
+            <li><code>activity</code> - Filter by activity type</li>
+            <li>And more based on your data structure...</li>
+        </ul>
+        <div class="example">
+            <strong>Example:</strong> <code>/api?continent=Europe&country=Italy</code>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h3><span class="method">GET</span> /api/continent/:continent</h3>
+        <p>Get all destinations in a specific continent.</p>
+        <div class="example">
+            <strong>Example:</strong> <code>/api/continent/Europe</code>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h3><span class="method">GET</span> /api/country/:country</h3>
+        <p>Get all destinations in a specific country.</p>
+        <div class="example">
+            <strong>Example:</strong> <code>/api/country/Italy</code>
+        </div>
+    </div>
+
+    <h2>Response Format</h2>
+    <p>All endpoints return JSON data in the following format:</p>
+    <pre><code>{
+  "data": [...],
+  "count": number,
+  "message": "string"
+}</code></pre>
+
+    <h2>CORS</h2>
+    <p>This API supports Cross-Origin Resource Sharing (CORS) and can be accessed from any domain.</p>
+
+    <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #666;">
+        <p>Wild Horizons API - Deployed on Netlify</p>
+    </footer>
+</body>
+</html>
